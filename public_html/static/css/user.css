@@ -1,0 +1,14 @@
+ul#langsel  li {display:inline; margin-bottom:1em;}
+form#formfrasi p label { display:block; }
+form#formfrasi p input
+{
+	font-face:"Arial, Helvetica, sans-serif";
+   border: 1px solid;
+   margin-top:10px;
+   height:25px;
+   width:235px;
+}
+#success_message {
+	color:green;
+	font-size:1.2em;
+}

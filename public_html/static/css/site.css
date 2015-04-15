@@ -1,0 +1,61 @@
+.inner {
+    display:none;
+    border: 1px solid #dfdfdf;
+    float:left;
+    /*width:670px;*/
+    width: 0px;
+    height:459px;
+    overflow:auto;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.inner article {padding:0 1em;}
+#content {margin-left:1em}
+label {
+    float:left;
+    display:block;
+    height:459px;
+    width: 60px;
+}
+#content [type=radio] {
+  display: none;
+}
+
+[type=radio]:checked ~ .inner {
+    display:block;
+    width:670px;
+    -webkit-transition: width 2s linear;
+    transition: width 2s linear;
+}
+
+#page1 > label {background: url('../images/main_nav.png') 0 0;}
+input#tab-1[type=radio]:checked ~ label {background: url('../images/main_nav.png') 0 458px;}
+#page2 > label {background: url('../images/main_nav.png') -60px 0;}
+input#tab-2[type=radio]:checked ~ label {background: url('../images/main_nav.png') -60px 458px;}
+#page3 > label {background: url('../images/main_nav.png') -120px 0;}
+input#tab-3[type=radio]:checked ~ label {background: url('../images/main_nav.png') -120px 458px;}
+#page5 > label {background: url('../images/main_nav.png') -180px 0;}
+input#tab-5[type=radio]:checked ~ label {background: url('../images/main_nav.png') -180px 458px;}
+
+.contact ul {list-style-type: none}
+
+header #logo h1 {
+font-size: 150px;
+font-weight: normal;
+text-shadow: 3px 3px 5px #000;
+text-align: center;
+font-family: 'Courier New';
+line-height: 50px;
+margin-bottom: 50px;
+color:black;
+}
+#logo {text-decoration: none}
+
+header .slogan {
+text-shadow: 3px 3px 5px #000;
+text-align: center;
+font-size: 40px;
+line-height: 40px;
+font-family: 'UbuntuRegular';
+}
