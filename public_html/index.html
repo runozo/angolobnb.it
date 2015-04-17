@@ -6,7 +6,7 @@
 <title>Angolo B&amp;B</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="Angolo Bed &amp; Breakfast - Bologna">
-<meta name="keywords" content="b &amp; b, bed&amp;breakfast bologna, bologna, b&amp;b bologna centro, b&anmp;b stazione, bologna fiera, via marconi, autobus, stanze, b and b">
+<meta name="keywords" content="b &amp; b, bed&amp;breakfast bologna, bologna, b&amp;b bologna centro, b&anmp;b stazione, bologna fiera, via marconi, autobus, stanze">
 <meta name="robots" content="index, follow" />
 <!-- CSS files -->
 <link rel="stylesheet" href="static/css/bootstrap.min.css" />
@@ -19,27 +19,89 @@
     background-size: cover;
     padding-bottom: 40px;
   }
-  .jumbotron {padding-top:0;}
+  .jumbotron {
+    padding-top:0;
+    background-color:transparent;
+  }
+  #carousel1 .item, #carousel2 .item {
+    margin-top: 10px;
+    height: 400px;
+  }
+  #myCarousel .item{
+    max-height: 500px;
+  }
+  .logo {
+    font-size: 50px;
+    color:black;
+  }
+  .logo:hover {
+    text-decoration: none;
+    color: black;
+  }
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-left:12px;
+  }
+  .navbar-nav {
+    float: right;
+    margin-top:20px;
+  }
+  .navbar-inverse .navbar-nav>li {
+    font-size: 20px;
+  }
+  .navbar-inverse .navbar-nav>li>a {
+    color: black;
+  }
+  .navbar-inverse .navbar-nav>li>a:hover {
+    color:darkblue;
+  }
   .navbar,  .address {
-    background-color: white;
-    background-image:url('static/images/bbfinale.jpg');
-    background-repeat: repeat;
     border:0;
   }
-  .navbar-brand,
-  .navbar-brand:active,
-  .navbar-brand:hover,
-  .navbar-brand:visited {
-    font-size: 42px;
-    color: black !important;
+  .angolobkg {
+    background-image:url('static/images/bbfinale.jpg');
+    background-repeat: repeat;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .parag {
+    border-radius:8px;
+    padding: 12px;
+    margin-bottom: 28px;
+  }
+  .carousel-control {
+    color:transparent;
+  }
+  .carousel-control:hover {
+    color:black;
+  }
+  .caesar a {
+    text-decoration: none;
+    opacity: 0.1;
+    color:black;
+  }
+  .caesar a:hover {
+    text-decoration: none;
+    opacity: 1;
+    color:black;
+    transition: opacity 2.5s ease-in-out;
+    -moz-transition: opacity 2.5s ease-in-out;
+    -webkit-transition: opacity 2.5s ease-in-out;
   }
 </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-      <div class="container">
-          <a class="navbar-brand" href="/">angolo <span class="reversed">B</span>&amp;B</a>
-          <span style="float:right;color:darkgrey">Bed &amp; Breakfast, Bologna, Italy</span>
+<nav class="navbar navbar-inverse angolobkg">
+      <div class="navbar-header">
+          <a class="logo" href="/">angolo <span class="reversed">B</span>&amp;B</a>
+          <p>Bed &amp; Breakfast, Bologna, Italy</p>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#rooms">Stanze</a></li>
+            <li><a href="#about">Indicazioni</a></li>
+            <li><a href="#contact">Contatti</a></li>
+          </ul>
       </div>
     </nav>
     <!-- header end-->
@@ -60,30 +122,26 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox" style="border-radius:4px">
           <div class="item">
-            <img src="static/images/slider/RUD_8400.jpg"  class="img-responsive" alt="Cordialità">
+            <img src="static/images/slider/RUD_8400.jpg" alt="Cordialità">
             <div class="carousel-caption">
-              <h3>Cordialità</h3>
             </div>
           </div>
 
           <div class="item">
-            <img src="static/images/slider/vista_angolob.jpg" class="img-responsive" alt="Tranquillità">
+            <img src="static/images/slider/vista_angolob.jpg" alt="Tranquillità">
               <div class="carousel-caption">
-              <h3>Tranquillità</h3>
             </div>
           </div>
 
           <div class="item active">
-            <img src="static/images/slider/RUD_8307.jpg" class="img-responsive" alt="Comodità">
+            <img src="static/images/slider/RUD_8307.jpg" alt="Comodità">
             <div class="carousel-caption">
-              <h3>Comodità</h3>
             </div>
           </div>
 
           <div class="item">
-            <img src="static/images/slider/RUD_8669.jpg" class="img-responsive" alt="Pulizia">
+            <img src="static/images/slider/RUD_8669.jpg" alt="Pulizia">
             <div class="carousel-caption">
-              <h3>Pulizia</h3>
             </div>
           </div>
         </div><!-- end carousel -->
@@ -100,17 +158,29 @@
       </div>
 </div>
         <!-- about us tab end-->
+      <a name="rooms"></a>
       <div class="container">
             <div class="row">
-                  <h3 class="color_orange">Le nostre stanze</h3>
-                  <p>Le stanze a vostra disposizione, sono entrambe dotate di bagno privato. Abbiamo anche una zona cucina comune dove vengono servite le colazioni.</p>
-      <div class="col-md-4">
+              <div class="col-sm-4 col-sm-offset-4">
+                  <h2 class="text-center" style="margin-bottom:32px">Le nostre stanze</h2>
+                  <div class="parag angolobkg">
+
+                  <p>Le stanze a vostra disposizione, sono entrambe dotate di bagno privato.<br>Abbiamo anche una zona cucina comune dove vengono servite le colazioni.</p>
+                  <p>Se vuoi, puoi preventivamente effettuare una <a href="http://goo.gl/22lh09" target="_blank">visita virtuale 3d</a> di angoloB&B.</p>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
       <div id="carousel1" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel1" data-slide-to="0" class="active"></li>
           <li data-target="#carousel1" data-slide-to="1"></li>
           <li data-target="#carousel1" data-slide-to="2"></li>
+          <li data-target="#carousel1" data-slide-to="3"></li>
+          <li data-target="#carousel1" data-slide-to="4"></li>
+          <li data-target="#carousel1" data-slide-to="5"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -135,32 +205,7 @@
               <h4>Stanza Arancio</h4><p>La zona bagno della stanza Arancio.</p>
             </div>
           </div>
-        </div><!-- end carousel-inner -->
-        </div><!-- end carousel -->
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <div class="col-md-4">
-      <div id="carousel2" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel2" data-slide-to="0"></li>
-          <li data-target="#carousel2" data-slide-to="1"></li>
-          <li data-target="#carousel2" data-slide-to="2" class="active"></li>
-          <li data-target="#carousel2" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox" style="border-radius:4px">
-          <div class="item active">
+          <div class="item">
             <img src="static/images/work/STANZA_BLU_3.png" class="img-responsive" alt="Comodità">
             <div class="carousel-caption">
               <h4>Stanza Blu</h4><p>La nostra stanza ispirata dal colore blu.</p>
@@ -180,15 +225,15 @@
               <h4>Cucina</h4><p>La cucina dove vengono servite le colazioni.</p>
             </div>
           </div>
-          </div> <!-- end carousel-inner -->
+        </div><!-- end carousel-inner -->
         </div><!-- end carousel -->
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#carousel2" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel2" role="button" data-slide="next">
+        <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -198,45 +243,63 @@
         <!-- about us tab end-->
 
         <!-- work tab start-->
-        <dt class="dt3"><a href="#page3"></a></dt>
-        <dd id="page3" class="container">
-        <label for="tab-3">&nbsp;</label>
+        <div class="container" style="margin-top:40px">
+          <a name="about"></a>
           <div class="row">
-            <div class="col-sm-12">
-                <h3 class="color_orange">Come raggiungerci</h3>
-                    <a href="http://bit.ly/1GTDddh" title="Vedi su Google Maps"><img src="static/images/about/mappa.png" class="img-responsive img-rounded"></a>
-                    <h3>A PIEDI</h3>
-                    <p>Usciti dall'atrio principale della stazione centrale ci si trova in piazzale Medaglie d'oro. Con le spalle alla stazione imboccare viale Pietramellara a destra e proseguire per cira 80 metri, svoltare quindi a sinistra in via Giovanni Amendola. Percorrere tutta via G. Amendola ( circa 400 metri) fino a giungere in piazza dei Martiri 1943/45. Alla rotonda prendere la seconda uscita e imboccare via G. Marconi. Percorsi circa 600 metri sul lato destro della strada, al numero civico 16, si trova il Bed and Breakfast Angolo B&amp;B.</p>
-                    <p>Tempo di percorrenza 10 minuti.</p>
-
-                    <h3>IN AUTOBUS</h3>
-                    <p>Da piazzale Medaglie d'oro partono diverse linee che portano velocemente alla fermata denominata Marconi di fronte al nostro B&amp;B:</p>
-                    <p>Linea 11, Linea 13, Linea 19, Linea 21, Linea 25, Linea 30, Navetta D.</p>
-                    <p>Tempo di percorrenza 5 minuti.</p>
-                    <h3>COME RAGGIUNGERE IL QUARTIERE FIERISTICO DA ANGOLO B&amp;B</h3>
-                    <p>Dalla fermata Marconi partono due linee di autobus che portano alla Fiera di Bologna:</p>
-                    <p>Linea 28, Linea 38.</p>
-                    <p>Tempo di percorrenza 15 minuti.</p>
-                    <h3>COME RAGGIUNGERE L'OSPEDALE S.ORSOLA DA ANGOLO B&amp;B</h3>
+            <h2 class="text-center" style="margin-bottom:32px">Come raggiungerci</h2>
+            <div class="col-sm-4">
+                    <h3><i class="fa fa-globe"></i>&nbsp;&nbsp;&nbsp;Google Maps</h3>
+                    <div style="padding-top:20px">
+                    <a href="http://bit.ly/1GTDddh" title="Vedi su Google Maps"><img src="static/images/about/mappa.png" class="img-responsive img-rounded center-block"></a>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+              <h3><i class="fa fa-male"></i>&nbsp;&nbsp;&nbsp;A piedi</h3>
+              <div class="angolobkg parag">
+                    <p>Usciti dall'atrio principale della <b>stazione centrale</b> ci si trova in piazzale Medaglie d'oro.</p><p>Con le spalle alla stazione imboccare viale Pietramellara a destra e proseguire per cira 80 metri, svoltare quindi a sinistra in via Giovanni Amendola.</p><p>Percorrere tutta via G. Amendola ( circa 400 metri) fino a giungere in piazza dei Martiri 1943/45. Alla rotonda prendere la seconda uscita e imboccare via G. Marconi. Percorsi circa 600 metri sul lato destro della strada, al numero civico 16, si trova il Bed and Breakfast Angolo B&amp;B.</p>
+                    <p>Tempo di percorrenza <b>10 minuti</b>.</p>
+               </div>
+            </div>
+            <div class="col-sm-4">
+              <h3><i class="fa fa-bus"></i>&nbsp;&nbsp;&nbsp;In autobus</h3>
+              <div class="angolobkg parag">
+                <p>Da piazzale Medaglie d'oro partono diverse linee che portano velocemente alla fermata denominata <b>Marconi</b> di fronte al nostro B&amp;B:</p>
+                <p>Linea 11, Linea 13, Linea 19, Linea 21, Linea 25, Linea 30, Navetta D.</p>
+                <p>Tempo di percorrenza <b>5 minuti</b>.</p>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+              <h3><i class="fa fa-flag"></i>&nbsp;&nbsp;&nbsp;Come raggiungere il quartiere fieristico da AngoloB&amp;B</h3>
+              <div class="angolobkg parag">
+                <p>Dalla fermata Marconi partono due linee di autobus che portano alla Fiera di Bologna:</p>
+                <p>Linea 28, Linea 38.</p>
+                <p>Tempo di percorrenza <b>15 minuti</b>.</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <h3><i class="fa fa-h-square"></i>&nbsp;&nbsp;&nbsp;Come raggiungere l'ospedale S.Orsola da AngoloB&amp;B</h3>
+              <div class="angolobkg parag">
                     <p>Dalla fermata Marconi:</p>
                     <p>Linea 89, Linea 94.</p>
-                    <p>Dalla fermata Ugo Bassi (2 minuti a piedi da Angolo B&amp;B):</p>
+                    <p>Dalla fermata Ugo Bassi (2 minuti a piedi da AngoloB&amp;B):</p>
                     <p>Linea 14.</p>
-                    <p>Tempo di percorrenza 10 minuti.</p>
+                    <p>Tempo di percorrenza <b>10 minuti</b>.</p>
+              </div>
              </div>
           </div>
-
-
-
-        </dd>
+        </div>
         <!-- work tab end-->
 
 
         <!-- contact tab start-->
-          <div class="container">
+          <a name="contact"></a>
+          <div class="container" style="margin-top:40px">
             <div class="row">
-              <div class="col-sm-12">
-              <div class="col-sm-6 pull-right address">
+              <h3>Contatti</h3>
+              <div class="col-sm-3">
+              <div class="angolobkg parag">
               <address>
                   <strong>Angolo B&amp;B</strong><br>
                     Via Marconi, 16<br>
@@ -246,18 +309,28 @@
                     <i class="fa fa-envelope"></i> angolobnb@gmail.com<br>
                     <i class="fa fa-phone"></i> +39 340 6065796<br>
                     <br>
+                    <p class="text-center">
                     <i class="fa fa-facebook-square fa-2x" style="color:#3b5998"></i>
                     <i class="fa fa-twitter-square fa-2x" style="color:#4099FF"></i>
                     <i class="fa fa-google-plus-square fa-2x" style="color:#D34836"></i>
-                  </address>
+                    </p>
+                    </p>
+                  </addre ss>
                 </div>
-                <div class="col-sm-6 push-left">
-                <img src="static/images/about/RUD_8677.jpg" alt="ingresso angolo b&b" width="350" height="233" />
+                </div>
+                <div class="col-sm-2">
+                <img src="static/images/about/RUD_8677.jpg" alt="ingresso angolo b&b" width="350" height="233" class="img-rounded" />
               </div>
               </div>
-            </div>
           </div>
         <!-- contact tab end-->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-right caesar">
+              <a href="https://github.com/runozo/angolobnb.it" title="sources hosted in github">crafted by Caesar <i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
 <script type="text/javascript" src="static/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 <script>
