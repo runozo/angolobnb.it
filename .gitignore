@@ -55,4 +55,3 @@ target/
 
 logs/
 virtual_env/
-deploy.sh
